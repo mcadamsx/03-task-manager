@@ -2,11 +2,13 @@ const mongoose = require("mongoose");
 const validator = require('validator')
 
 const usersSchema = mongoose.Schema({
-  name: {
+  username: {
     type: String,
-    required: [true, "Please provide name"],
-    minlength: 3,
+    required: [true, "Please provide username"],
+    minlength: 5,
     maxlength: 50,
+    lowercase: true,
+    
   },
   email: {
     type: String,
