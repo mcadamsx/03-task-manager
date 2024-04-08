@@ -22,6 +22,10 @@ const usersSchema = mongoose.Schema({
     required: [true, "Please provide password"],
     minlength: 8,
   },
+  image: {
+    type: String,
+    required: false
+  }
 },
 {
     timestamps: true
