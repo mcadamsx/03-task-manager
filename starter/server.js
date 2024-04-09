@@ -7,16 +7,11 @@ app.use(cors());
 
 
 
-
 const connectDB = require("./db/connect");
 const router = require("./router/user.router");
 
 app.use(express.json());
 app.use("/api", router);
-
-
-
-
 
 
 const PORT = process.env.PORT || 3000;
